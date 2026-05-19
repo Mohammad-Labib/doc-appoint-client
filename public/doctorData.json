@@ -1,0 +1,122 @@
+[
+  {
+    "id": "d1",
+    "name": "Dr. Ayesha Rahman",
+    "specialty": "Cardiologist",
+    "image": "https://i.ibb.co/doctor-demo.jpg",
+    "experience": "10 years",
+    "availability": ["09:00 AM - 12:00 PM", "04:00 PM - 07:00 PM"],
+    "description": "Highly experienced cardiologist specializing in heart diseases, preventive care, and patient-centered treatment.",
+    "hospital": "Labaid Cardiac Hospital",
+    "location": "Dhanmondi, Dhaka",
+    "fee": 800
+  },
+  {
+    "id": "d2",
+    "name": "Dr. Mahmud Hasan",
+    "specialty": "Neurologist",
+    "image": "https://i.ibb.co/doctor-demo.jpg",
+    "experience": "12 years",
+    "availability": ["10:00 AM - 01:00 PM", "05:00 PM - 08:00 PM"],
+    "description": "Expert neurologist experienced in treating stroke, migraine, epilepsy, and other nervous system disorders.",
+    "hospital": "Square Hospital",
+    "location": "Panthapath, Dhaka",
+    "fee": 1000
+  },
+  {
+    "id": "d3",
+    "name": "Dr. Nusrat Jahan",
+    "specialty": "Dermatologist",
+    "image": "https://i.ibb.co/doctor-demo.jpg",
+    "experience": "8 years",
+    "availability": ["11:00 AM - 02:00 PM", "06:00 PM - 09:00 PM"],
+    "description": "Specialized in skin, hair, and nail treatments with modern cosmetic dermatology expertise.",
+    "hospital": "Apollo Diagnostic Center",
+    "location": "Uttara, Dhaka",
+    "fee": 700
+  },
+  {
+    "id": "d4",
+    "name": "Dr. Tanvir Ahmed",
+    "specialty": "Orthopedic Surgeon",
+    "image": "https://i.ibb.co/doctor-demo.jpg",
+    "experience": "15 years",
+    "availability": ["08:00 AM - 11:00 AM", "03:00 PM - 06:00 PM"],
+    "description": "Experienced orthopedic surgeon focusing on bone, joint, and sports injury treatments.",
+    "hospital": "United Hospital",
+    "location": "Gulshan, Dhaka",
+    "fee": 1200
+  },
+  {
+    "id": "d5",
+    "name": "Dr. Farzana Islam",
+    "specialty": "Gynecologist",
+    "image": "https://i.ibb.co/doctor-demo.jpg",
+    "experience": "9 years",
+    "availability": ["09:30 AM - 12:30 PM", "04:30 PM - 07:30 PM"],
+    "description": "Dedicated gynecologist providing comprehensive womens healthcare and maternity services.",
+    "hospital": "Popular Medical College Hospital",
+    "location": "Shyamoli, Dhaka",
+    "fee": 900
+  },
+  {
+    "id": "d6",
+    "name": "Dr. Samiul Karim",
+    "specialty": "Pediatrician",
+    "image": "https://i.ibb.co/doctor-demo.jpg",
+    "experience": "7 years",
+    "availability": ["10:00 AM - 01:00 PM", "05:00 PM - 07:00 PM"],
+    "description": "Child specialist with expertise in newborn care, nutrition, and childhood disease management.",
+    "hospital": "Bangladesh Specialized Hospital",
+    "location": "Shyamoli, Dhaka",
+    "fee": 600
+  },
+  {
+    "id": "d7",
+    "name": "Dr. Imran Kabir",
+    "specialty": "ENT Specialist",
+    "image": "https://i.ibb.co/doctor-demo.jpg",
+    "experience": "11 years",
+    "availability": ["09:00 AM - 11:30 AM", "04:00 PM - 06:30 PM"],
+    "description": "ENT specialist experienced in treating ear, nose, throat, and sinus-related conditions.",
+    "hospital": "Ibn Sina Hospital",
+    "location": "Mirpur, Dhaka",
+    "fee": 750
+  },
+  {
+    "id": "d8",
+    "name": "Dr. Sharmeen Akter",
+    "specialty": "Psychiatrist",
+    "image": "https://i.ibb.co/doctor-demo.jpg",
+    "experience": "13 years",
+    "availability": ["02:00 PM - 05:00 PM", "07:00 PM - 09:00 PM"],
+    "description": "Mental health specialist focused on anxiety, depression, stress management, and therapy.",
+    "hospital": "Mind Care Clinic",
+    "location": "Banani, Dhaka",
+    "fee": 1100
+  },
+  {
+    "id": "d9",
+    "name": "Dr. Rakib Chowdhury",
+    "specialty": "General Physician",
+    "image": "https://i.ibb.co/doctor-demo.jpg",
+    "experience": "6 years",
+    "availability": ["08:30 AM - 11:30 AM", "05:00 PM - 08:00 PM"],
+    "description": "General physician providing primary healthcare, diagnosis, and preventive medical consultation.",
+    "hospital": "Green Life Hospital",
+    "location": "Green Road, Dhaka",
+    "fee": 500
+  },
+  {
+    "id": "d10",
+    "name": "Dr. Sadia Noor",
+    "specialty": "Ophthalmologist",
+    "image": "https://i.ibb.co/doctor-demo.jpg",
+    "experience": "14 years",
+    "availability": ["09:00 AM - 12:00 PM", "03:00 PM - 06:00 PM"],
+    "description": "Eye specialist skilled in cataract surgery, glaucoma treatment, and vision care.",
+    "hospital": "National Eye Hospital",
+    "location": "Farmgate, Dhaka",
+    "fee": 950
+  }
+]
