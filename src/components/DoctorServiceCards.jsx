@@ -1,8 +1,9 @@
 import { Card, Avatar, Button } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const DoctorServiceCards = ({doctor}) => {
-  const { name, specialty, image, experience, availability, description, hospital, location, fee } = doctor || {};
+  const {_id, name, specialty, image, experience, availability, description, hospital, location, fee } = doctor || {};
   return (
     <div>
         <Card className="group w-[320px] sm:w-[360px]  rounded border border-white/10 text-black shadow-2xl ">
@@ -74,9 +75,9 @@ const DoctorServiceCards = ({doctor}) => {
     </div>
 
     {/* Button */}
-    <Button className="h-11 w-full rounded-2xl bg-green-500 text-sm font-semibold text-white transition-all duration-300 hover:bg-orange-400">
+   <Link href={`/all-appointment/${_id}`}> <Button className="h-11 w-full rounded-2xl bg-green-500 text-sm font-semibold text-white transition-all duration-300 hover:bg-orange-400">
       View Details
-    </Button>
+    </Button></Link>
   </div>
 </Card>
     </div>
