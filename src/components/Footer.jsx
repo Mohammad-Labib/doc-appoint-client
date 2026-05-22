@@ -10,7 +10,7 @@ const Footer = () => {
             DocAppoint
           </h1>
           <p className="mt-4 max-w-xl">
-            Your gateway to extraordinary travel experiences around the world.
+            Your gateway to visiting a doctors.
           </p>
         </div>
 
@@ -18,9 +18,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Newsletter */}
           <div>
-            <h3 className="text-white mb-3 tracking-wide">NEWSLETTER</h3>
+            <h3 className="text-white mb-3 tracking-wide">Heltcere</h3>
             <p className="mb-4 text-sm">
-              Subscribe for exclusive travel deals and inspiration.
+              Subscribe for exclusive more info deals and inspiration.
             </p>
 
             <div className="flex items-center bg-gray-800 px-4 py-3">
@@ -38,7 +38,7 @@ const Footer = () => {
             <h3 className="text-white mb-3 tracking-wide">QUICK LINKS</h3>
             <ul className="space-y-2">
               <li className="hover:text-white cursor-pointer">Home</li>
-              <li className="hover:text-white cursor-pointer">Destinations</li>
+              <li className="hover:text-white cursor-pointer">DocAppoinment</li>
               <li className="hover:text-white cursor-pointer">My Bookings</li>
               <li className="hover:text-white cursor-pointer">My Profile</li>
             </ul>
@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Support */}
           <div>
-            <h3 className="text-white mb-3 tracking-wide">SUPPORT</h3>
+            <h3 className="text-white mb-3 tracking-wide">service</h3>
             <ul className="space-y-2">
               <li className="hover:text-white cursor-pointer">Help Center</li>
               <li className="hover:text-white cursor-pointer">
@@ -71,7 +71,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm">
-            © 2026 Wanderlust. All rights reserved.
+            © 2026 Docappoint. All rights reserved.
           </p>
 
           <div className="flex gap-5 mt-4 md:mt-0 text-white text-lg">
