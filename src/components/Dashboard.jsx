@@ -8,15 +8,21 @@ const Dashboard = ({ doctor, onUpdate, onDelete }) => {
   const { _id, name, specialty, image, experience, availability, fee } = doctor || {};
 
   return (
-    <Card className="w-full max-w-[700px] flex-col md:flex-row items-stretch p-4 gap-4 border border-white/10 shadow-2xl relative text-black overflow-hidden">
+    <Card className="w-full justify-center items-center max-w-[700px] flex-col md:flex-row  p-4 gap-4 border border-white/10 shadow-2xl relative text-black overflow-hidden">
       
   
         
   
 
       {/* Right Side: Content Area */}
+     
       <div className="flex flex-1 flex-col justify-between gap-3">
-        
+
+        <div className="flex gap-6">
+          <Button variant="outline">Outline</Button>
+         <Button variant="outline">My Booking</Button>
+      </div>
+
         {/* Upper Content: Info */}
         <div className="space-y-1">
           <div className="flex items-center justify-between gap-2">

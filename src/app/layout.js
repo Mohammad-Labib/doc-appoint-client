@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import Feature from "@/components/Feature";
 import { Toaster } from "react-hot-toast";
 import AdditionalSection from "@/components/AdditionalSection";
-import Dashboard from '@/components/Dashboard';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
         <Feature></Feature>
         <Toaster />
         <AdditionalSection></AdditionalSection>
-          <Dashboard></Dashboard>
+          
         <Footer></Footer>
         </body>
     </html>
