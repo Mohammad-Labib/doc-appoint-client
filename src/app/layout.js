@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import DoctorServiceCards from "@/components/DoctorServiceCards";
 import Footer from "@/components/Footer";
 import Feature from "@/components/Feature";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         {children}
         {/* <DoctorServiceCards></DoctorServiceCards> */}
         <Feature></Feature>
+        <Toaster />
         <Footer></Footer>
         </body>
     </html>

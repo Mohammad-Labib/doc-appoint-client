@@ -1,0 +1,93 @@
+'use client'
+
+import { signUp } from "@/lib/aouth-client";
+import {
+  Card,
+  Form,
+  Input,
+  Button,
+  Label,
+  FieldError,
+  TextField,
+  Description
+} from "@heroui/react";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
+
+const RegisterPage = () => {
+    const router = useRouter();
+
+    const handleRegister = async (e) => {
+        e.preventDefault();
+
+        // console.log("form submitted");
+
+        const formData = new FormData(e.currentTarget);
+
+        const registerdata = Object.fromEntries(formData.entries());
+
+        const { data, error } = await signUp.email({
+            ...registerdata,
+           
+    })
+    if(error){
+        
+        toast.error('Register faild !');
+        return
+    }
+    router.push("/")
+
+        // console.log(data);
+
+    };
+
+    return (
+        <div className="min-h-screen flex items-center justify-center">
+
+            <Card className='border rounded-none p-6'>
+
+                <h1 className="text-2xl font-bold text-center mb-4">
+                    Register
+                </h1>
+
+                <Form className="flex w-96 flex-col gap-4" onSubmit={handleRegister}>
+
+                    <TextField isRequired name="name" type="text">
+                        <Label>Name</Label>
+                        <Input placeholder="Enter your name" />
+                        <FieldError />
+                    </TextField>
+
+                    <TextField name="image" type="url">
+                        <Label>Image URL</Label>
+                        <Input placeholder="Image url" />
+                    </TextField>
+
+                    <TextField isRequired name="email" type="email">
+                        <Label>Email</Label>
+                        <Input placeholder="john@example.com" />
+                        <FieldError />
+                    </TextField>
+
+                    <TextField isRequired name="password" type="password">
+                        <Label>Password</Label>
+                        <Input placeholder="Enter your password" />
+                        <Description>
+                            Must be at least 8 characters
+                        </Description>
+                        <FieldError />
+                    </TextField>
+
+                    <Button className="rounded-none w-full" type="submit">
+                        Create Account
+                    </Button>
+
+                </Form>
+
+            </Card>
+
+        </div>
+    );
+};
+
+export default RegisterPage;
