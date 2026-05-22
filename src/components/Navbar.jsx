@@ -8,14 +8,14 @@ const Navbar = () => {
             <nav className='flex justify-between'>
 
                   <div>
-                    <Image
+                    {/* <Image
 
                     src={'/assets/doctor-logo.png'}
                     height={50}
                     width={50}
                     alt="logo"
                     
-                    />
+                    /> */}
                 <h1 className='text-2xl font-bold text-green-500'>DocAppoint</h1>
                  
                 </div>

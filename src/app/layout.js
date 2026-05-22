@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import DoctorServiceCards from "@/components/DoctorServiceCards";
 import Footer from "@/components/Footer";
+import Feature from "@/components/Feature";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +30,8 @@ export default function RootLayout({ children }) {
 
         <Navbar></Navbar>
         {children}
-        <DoctorServiceCards></DoctorServiceCards>
+        {/* <DoctorServiceCards></DoctorServiceCards> */}
+        <Feature></Feature>
         <Footer></Footer>
         </body>
     </html>
