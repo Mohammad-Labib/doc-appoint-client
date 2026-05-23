@@ -1,15 +1,15 @@
 'use client'
 
-import { signUp } from "@/lib/aouth-client";
+import { signUp } from "@/lib/auth-client";
 import {
-  Card,
-  Form,
-  Input,
-  Button,
-  Label,
-  FieldError,
-  TextField,
-  Description
+    Card,
+    Form,
+    Input,
+    Button,
+    Label,
+    FieldError,
+    TextField,
+    Description
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
@@ -28,14 +28,14 @@ const RegisterPage = () => {
 
         const { data, error } = await signUp.email({
             ...registerdata,
-           
-    })
-    if(error){
-        
-        toast.error('Register faild !');
-        return
-    }
-    router.push("/")
+
+        })
+        if (error) {
+            console.log(error);
+            toast.error(error.message || "Register failed!");
+            return;
+        }
+        router.push("/")
 
         // console.log(data);
 
@@ -46,9 +46,12 @@ const RegisterPage = () => {
 
             <Card className='border rounded-none p-6'>
 
-                <h1 className="text-2xl font-bold text-center mb-4">
-                    Register
-                </h1>
+                <div>
+                    <h1 className="text-2xl font-bold text-center">
+                        Register
+                    </h1>
+                    <h1 className="text-sm text-center">Create your DocAppoint</h1>
+                </div>
 
                 <Form className="flex w-96 flex-col gap-4" onSubmit={handleRegister}>
 
@@ -65,7 +68,7 @@ const RegisterPage = () => {
 
                     <TextField isRequired name="email" type="email">
                         <Label>Email</Label>
-                        <Input placeholder="john@example.com" />
+                        <Input placeholder="labib@example.com" />
                         <FieldError />
                     </TextField>
 
@@ -79,7 +82,7 @@ const RegisterPage = () => {
                     </TextField>
 
                     <Button className="rounded-none w-full" type="submit">
-                        Create Account
+                        Register
                     </Button>
 
                 </Form>

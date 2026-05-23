@@ -1,5 +1,6 @@
 'use client'
 
+import { authClient, signIn } from '@/lib/auth-client';
 import { Check } from '@gravity-ui/icons';
 import { Button, Card, Description, FieldError, Form, Input, Label, Separator, TextField } from '@heroui/react';
 import { redirect } from 'next/navigation';
@@ -9,26 +10,34 @@ import { FcGoogle } from 'react-icons/fc';
 
 const LoginPage = () => {
 
-    const onSubmit = async (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.currentTarget);
-        const user = Object.fromEntries(formData.entries());
 
-        const { data, error } = await authClient.signIn.email({
-            email:user.email,
-            password: user.password,
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        // console.log("form submitted");
+
+        const formData = new FormData(e.currentTarget);
+
+        const logindata = Object.fromEntries(formData.entries());
+
+        const { data, error } = await signIn.email({
+            ...logindata,
+            callbackURL: "/"
 
         })
-        console.log({data, error});
-        // console.log(user);
 
-        if(data){
-            redirect('/')
+        const { data:tokenData } = await authClient.token()
+        console.log(tokenData);
+
+        if (error) {
+            console.log(error);
+            toast.error(error.message || "Login failed!");
+            return;
         }
-           if (error) {
-        // toast.error(error.message || "Signup Failed!");
-        alert("Error")
-    }
+        // router.push("/")
+
+        // console.log(data);
+
     };
 
       const handleGoogleSign =async () =>{
@@ -39,13 +48,13 @@ const LoginPage = () => {
         }
         
     return (
-        <div className='max-w-7xl mx-auto'>
-            <div className='text-center my-3'>
-                <h1 className='text-2xl font-bold'>Login</h1>
+        <div className='max-w-7xl mx-auto p-8'>
+            <div className='text-center my-3 shadow'>
+                <h1 className='text-3xl font-bold'>Login</h1>
                 <p>Start your adventure with DocAppoint</p>
             </div>
             <Card className='border rounded-none'>
-                <Form onSubmit = {onSubmit} className="flex w-96 flex-col gap-4">
+                <Form onSubmit = {handleLogin} className="flex w-96 flex-col gap-4">
 
                     {/* Email Part */}
                     <TextField
@@ -60,7 +69,7 @@ const LoginPage = () => {
                         }}
                     >
                         <Label>Email</Label>
-                        <Input placeholder="john@example.com" />
+                        <Input placeholder="labib@example.com" />
                         <FieldError />
                     </TextField>
 
@@ -71,8 +80,8 @@ const LoginPage = () => {
                         name="password"
                         type="password"
                         validate={(value) => {
-                            if (value.length < 8) {
-                                return "Password must be at least 8 characters";
+                            if (value.length < 6) {
+                                return "Password must be at least 6 characters";
                             }
                             if (!/[A-Z]/.test(value)) {
                                 return "Password must contain at least one uppercase letter";
@@ -85,7 +94,7 @@ const LoginPage = () => {
                     >
                         <Label>Password</Label>
                         <Input placeholder="Enter your password" />
-                        <Description>Must be at least 8 characters with 1 uppercase and 1 number</Description>
+                        <Description>Must be at least 6 characters with 1 uppercase and 1 number</Description>
                         <FieldError />
                     </TextField>
 
