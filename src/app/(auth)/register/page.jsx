@@ -76,7 +76,7 @@ const RegisterPage = () => {
                         <Label>Password</Label>
                         <Input placeholder="Enter your password" />
                         <Description>
-                            Must be at least 8 characters
+                            Must be at least 6 characters
                         </Description>
                         <FieldError />
                     </TextField>
