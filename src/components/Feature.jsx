@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Feature = async () => {
 
-    const res = await fetch("http://localhost:8000/featured", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/featured`, {
         cache: "no-store"
     });
     const doctors = await res.json();
