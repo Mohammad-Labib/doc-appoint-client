@@ -1,3 +1,8 @@
+=> Problem-1
+=> all-appointment card not showing. diploy koara age sob thik cilo pore je kothay problem hyce 
+
+=> problem ta dhorte parci but solve kor te pari ni
+
 
 ## Getting Started
 
